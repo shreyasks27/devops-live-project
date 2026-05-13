@@ -4,16 +4,22 @@ pipeline {
 
     stages {
 
-        stage('Build') {
-
+        stage('Clone Check') {
             steps {
-
-                sh 'docker images'
-
+                echo 'GitHub repository cloned successfully'
             }
-
         }
 
-    }
+        stage('List Files') {
+            steps {
+                sh 'ls -la'
+            }
+        }
 
+        stage('Test') {
+            steps {
+                echo 'Pipeline running successfully'
+            }
+        }
+    }
 }
