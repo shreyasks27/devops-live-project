@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+
+    - name: Test message
+      debug:
+        msg: "Ansible Running"
